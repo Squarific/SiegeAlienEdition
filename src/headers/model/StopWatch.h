@@ -16,7 +16,7 @@ namespace si {
 
 		 		// Time per frame
 		 		// Should be > 0
-				int _delta;
+				int _delta = 5;
 
 		 	public:
 		 		
@@ -34,10 +34,16 @@ namespace si {
 				void Reset();
 
 				/*
-					Get the amount of frames since now and either the last time 
+					Get the amount of frames since now and either the last time
 					getFrames was called or since Reset/Construction
+					Will always be >= 0
 				*/
 				int getFrames();
+
+				/*
+					Get the amount of milliseconds we are using as delta
+				*/
+				int getDeltaTime();
 		};
 	}
 }

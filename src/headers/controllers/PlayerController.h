@@ -2,17 +2,18 @@
 #define PLAYERCONTROLLER_H
 
 #include <memory>
+#include "Entitys.h"
 #include "Controller.h"
 
 namespace si {
 	namespace controller {
 
-		class PlayerController : Controller {
+		class PlayerController : public Controller {
 		public:
-			std::shared_ptr<Entity> target;
+			std::shared_ptr<si::Ship> target;
 
 			PlayerController();
-			PlayerController(std::shared_ptr<Entity> target);
+			PlayerController(std::shared_ptr<Ship> target);
 
 			virtual void update();
 		};

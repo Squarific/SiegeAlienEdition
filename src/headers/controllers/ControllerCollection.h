@@ -15,7 +15,7 @@ namespace si {
 			ControllerCollection();
 
 			// Let all controllers update
-			update();
+			void update();
 		};
 
 	}

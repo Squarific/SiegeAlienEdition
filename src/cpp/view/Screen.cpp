@@ -10,8 +10,10 @@ si::view::Screen::Screen () {
 
 si::view::Screen::Screen (si::model::Game* game) {
 	this->game = game;
+
+	std::vector<int> worldSize = this->game->getWorldSize();
 	this->window = new sf::RenderWindow(
-		sf::VideoMode(this->game->worldSize[0], this->game->worldSize[1]),
+		sf::VideoMode(worldSize.at(0), worldSize.at(1)),
 		"Space Invaders"
 	);
 }
@@ -27,7 +29,7 @@ void si::view::Screen::draw () {
 	this->window->setActive();
 	this->window->clear();
 
-	for (auto& obj : this->game->objectPointers) {
+	for (auto& obj : this->game->getObjects()) {
 		obj->draw(this->window);
 	}
 

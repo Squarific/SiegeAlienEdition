@@ -4,7 +4,6 @@
 #include <chrono>
 
 si::model::StopWatch::StopWatch () {
-	this->_delta = 5;
 	this->_lastTime = std::chrono::system_clock::now();
 }
 
@@ -29,4 +28,8 @@ int si::model::StopWatch::getFrames () {
 	int frames = elapsedMillis / this->_delta;
 	this->_lastTime += std::chrono::milliseconds(frames * this->_delta);
 	return frames;
+}
+
+int si::model::StopWatch::getDeltaTime () {
+	return this->_delta;
 }

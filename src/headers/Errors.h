@@ -13,7 +13,7 @@ class ArgumentShouldBeStrictPositive : ArgumentError {};
 class NotEnoughArgumentsError : ArgumentError {};
 
 // Game errors
-class BadWorldSizeException : ArgumentError {};
+class WorldSizeTooSmallError : ArgumentError {};
 
 // Entity errors
 class NoTextureArgument : ArgumentError {};
