@@ -27,6 +27,8 @@ void si::model::Game::update () {
 	int frames = this->stopWatch.getFrames();
 	int framesCopy = frames;
 
+	// TODO WHAT IF UPDATE TAKES LONGER THAN DELTATIME
+
 	// This is safe because getFrames returns a number above or equal to 0
 	while (frames--) {
 		// Add the entitys
@@ -37,6 +39,8 @@ void si::model::Game::update () {
 				this->objectPointers.push_back(entityPtr);
 			}
 		}
+
+		this->addObjects.clear();
 
 		for (auto& entity : this->objectPointers) {
 			// ===== Handle collisions =====
@@ -54,6 +58,8 @@ void si::model::Game::update () {
 				std::remove(vec.begin(), vec.end(), entityPtr), vec.end()
 			);
 		}
+
+		this->deleteObjects.clear();
 	}
 }
 
