@@ -28,6 +28,7 @@ namespace si {
 			void _handleAddObjects ();
 			void _handleRemoveObjects();
 			void _handleCollisions();
+			void _handleFinish();
 
 			// This is the amount of times we have used more times to calculate
 			// the frames than the frames were long, this means we are going
@@ -36,6 +37,12 @@ namespace si {
 			int _laggTimes = 0;
 
 		public:
+
+			int level = 1;
+
+			// Load the next xml level
+			void nextLevel();
+			void gameOver();
 
 			Game();
 			Game(int x, int y);
@@ -68,6 +75,8 @@ namespace si {
 
 			// Notify the observers that something about the subject changed
 			virtual void notifyObservers();
+
+			virtual void registerObserver(std::shared_ptr<si::Observer> observer);
 		};
 	}
 }

@@ -3,12 +3,13 @@
 
 #include <SFML/Graphics.hpp>
 #include "Game.h"
+#include "Observers.h"
 
 namespace si {
 	namespace view {
 
 		// This class creates a SFML window and will start drawing the game
-		class Screen {
+		class Screen : public Observer {
 		public:
 			// The sfml window
 			sf::RenderWindow* window;
@@ -22,6 +23,8 @@ namespace si {
 
 			// Draws one frame on the created window
 			void draw();
+
+			virtual void notify (si::Observable& subject);
 		};
 
 	}

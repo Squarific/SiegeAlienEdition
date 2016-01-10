@@ -169,6 +169,18 @@ void si::Ship::setThrustY (float y) {
 	this->thrust.at(1) = y;
 }
 
+void si::Ship::setMaxThrust (float x, float y) {
+	if (x < 0 || y < 0) throw new ArgumentShouldBePositive();
+	this->thrustPower.at(0) = x;
+	this->thrustPower.at(1) = y;
+}
+
+void si::Ship::setFireSpeed (int speed) {
+	if (speed < 0) throw new ArgumentShouldBeStrictPositive();
+
+	this->_fireSpeed = speed;
+}
+
 void si::Ship::collision (Bullet& with, si::model::Game& game) {
 	// If we fired the bullet just ignore the collision
 	if (with.isOwner(this)) return;
@@ -189,6 +201,7 @@ si::EnemyShip::EnemyShip (std::string textureFileName) : si::Ship::Ship(textureF
 void si::EnemyShip::collision (Bullet& with, si::model::Game& game) {
 	// If we fired the bullet just ignore the collision
 	if (with.isOwner(this)) return;
+	if (with.enemy) return;
 
 	game.removeEntity(this);
 }
@@ -232,6 +245,7 @@ void si::EnemyShip::update (int deltaTime, si::model::Game& game) {
 		bullet->setPosition(this->position.at(0), this->position.at(1));
 		bullet->setSpeed(0, 0.5);
 		bullet->setOwner(this);
+		bullet->enemy = true;
 
 		game.addEntity(bullet);
 		this->_msSinceLastBullet -= this->_fireSpeed;

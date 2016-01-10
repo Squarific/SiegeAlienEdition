@@ -53,6 +53,8 @@ namespace si {
 		std::string textureFileName;
 		sf::Sprite sprite;
 
+		virtual bool isEnemy() {return false;};
+
 		Entity();
 		Entity(const Entity& from);
 		Entity(std::string textureFileName);
@@ -92,6 +94,10 @@ namespace si {
 		Bullet();
 		Bullet(std::string textureFileName);
 
+		// Is this bullet from the enemy
+		bool enemy = false;
+		virtual bool isEnemy() {return this->enemy;};
+
 		// Has to be implemented on all entity types
 		void virtual executeCollisionUsingMeOn(EntityBase& other, si::model::Game& game);
 
@@ -125,6 +131,9 @@ namespace si {
 		// above 1 is futile
 		void setThrustX(float x);
 		void setThrustY(float y);
+		void setMaxThrust (float x, float y);
+
+		virtual bool isEnemy() {return false;};
 
 		void virtual update(int deltaTime, si::model::Game& game);     // Deltatime = ms
 
@@ -135,12 +144,15 @@ namespace si {
 		void virtual collision (Bullet& with, si::model::Game& game);
 
 		bool fireing = false;
+		void setFireSpeed(int speed);
 	};
 
 	class EnemyShip : public Ship {
 	public:
 		EnemyShip();
 		EnemyShip(std::string textureFileName);
+
+		virtual bool isEnemy() {return true;};
 
 		// Has to be implemented on all entity types
 		void virtual executeCollisionUsingMeOn(EntityBase& other, si::model::Game& game);
@@ -154,6 +166,8 @@ namespace si {
 	public:
 		Wall();
 		Wall(std::string textureFileName);
+
+		virtual bool isEnemy() {return false;};
 
 		// Has to be implemented on all entity types
 		void virtual executeCollisionUsingMeOn(EntityBase& other, si::model::Game& game);

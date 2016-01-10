@@ -1,0 +1,160 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/SiegeAlienEdition.cpp
+Game.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/Game.h
+Entitys.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/Entitys.h
+Screen.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/Screen.h
+PlayerController.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/PlayerController.h
+ControllerCollection.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/ControllerCollection.h
+XmlParser.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/XmlParser.h
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinystr.cpp
+tinystr.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinystr.h
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinystr.h
+assert.h
+-
+string.h
+-
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinyxml.cpp
+ctype.h
+-
+sstream
+-
+iostream
+-
+tinyxml.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinyxml.h
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinyxml.h
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+assert.h
+-
+string
+-
+iostream
+-
+sstream
+-
+tinystr.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinystr.h
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinyxmlerror.cpp
+tinyxml.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinyxml.h
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinyxmlparser.cpp
+ctype.h
+-
+stddef.h
+-
+tinyxml.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/TinyXML/tinyxml.h
+windows.h
+-
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/Entitys.cpp
+Entitys.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/Entitys.h
+Game.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/Game.h
+Errors.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/Errors.h
+iostream
+-
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/XmlParser.cpp
+tinyxml.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/tinyxml.h
+XmlParser.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/XmlParser.h
+Game.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/Game.h
+Entitys.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/Entitys.h
+Errors.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/Errors.h
+string
+-
+iostream
+-
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/controllers/Controller.cpp
+Controller.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/controllers/Controller.h
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/controllers/ControllerCollection.cpp
+ControllerCollection.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/controllers/ControllerCollection.h
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/controllers/PlayerController.cpp
+PlayerController.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/controllers/PlayerController.h
+SFML/Graphics.hpp
+-
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/Game.cpp
+vector
+-
+memory
+-
+algorithm
+-
+SFML/Graphics.hpp
+-
+Game.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/Game.h
+Errors.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/Errors.h
+Entitys.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/Entitys.h
+StopWatch.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/StopWatch.h
+XmlParser.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/XmlParser.h
+iostream
+-
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/StopWatch.cpp
+StopWatch.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/StopWatch.h
+Errors.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/model/Errors.h
+chrono
+-
+
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/view/Screen.cpp
+SFML/Graphics.hpp
+-
+Screen.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/view/Screen.h
+Errors.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/view/Errors.h
+Game.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/view/Game.h
+Observers.h
+/home/urban/Desktop/documentenshared/universiteit antwerpen/Gevorderde programeren/Space Invaders/src/cpp/view/Observers.h
+iostream
+-
+

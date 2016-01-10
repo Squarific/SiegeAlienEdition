@@ -7,6 +7,7 @@
 #include "Errors.h"
 #include "Entitys.h"
 #include "StopWatch.h"
+#include "XmlParser.h"
 
 #include <iostream>
 
@@ -40,6 +41,9 @@ void si::model::Game::update () {
 
 		// ===== Remove objects =====
 		this->_handleRemoveObjects();
+
+		// ===== Check if we finished the level ====
+		this->_handleFinish();
 	}
 
 	// If in the time we calculated the frames we now have to do more frames
@@ -56,6 +60,8 @@ void si::model::Game::update () {
 	if (this->_laggTimes > 5) {
 		this->stopWatch.setDeltaTime(this->stopWatch.getDeltaTime() * 2);
 	}
+
+	this->notifyObservers();
 }
 
 void si::model::Game::_handleAddObjects () {
@@ -106,6 +112,29 @@ void si::model::Game::_handleCollisions () {
 	}
 }
 
+void si::model::Game::_handleFinish () {
+	for (auto& entity : this->objectPointers) {
+		// If there is still an enemy left, dont do anything
+		if (entity->isEnemy()) {
+			return;
+		}
+	}
+
+	this->nextLevel();
+}
+
+void si::model::Game::nextLevel () {
+	this->level++;
+
+	if (this->level > 3) return;
+
+	si::XmlParser parser = si::XmlParser();
+	parser.fillGame((std::string("levels/level") +
+	                std::to_string(this->level) +
+	                std::string(".xml")).c_str(),
+	                *this);
+}
+
 void si::model::Game::addEntity (std::shared_ptr< Entity > entityPtr) {
 	this->addObjects.push_back(entityPtr);
 }
@@ -133,11 +162,17 @@ std::shared_ptr<si::Entity> si::model::Game::getEntity (si::Entity* entityPtr) {
 }
 
 void si::model::Game::notifyObservers () {
-	
+	for (auto& observer : this->observers) {
+		observer->notify(*this);
+	}
 };
 
-void si::model::Game::clear () {
+void si::model::Game::registerObserver (std::shared_ptr<si::Observer> observer) {
+	this->observers.push_back(observer);
+}
 
+void si::model::Game::clear () {
+	this->objectPointers.clear();
 };
 
 std::vector<int> si::model::Game::getWorldSize () {

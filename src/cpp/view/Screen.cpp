@@ -2,6 +2,7 @@
 #include "Screen.h"
 #include "Errors.h"
 #include "Game.h"
+#include "Observers.h"
 
 #include <iostream>
 
@@ -37,4 +38,8 @@ void si::view::Screen::draw () {
 
 	// End the frame and draw it all
 	this->window->display();
+}
+
+void si::view::Screen::notify (si::Observable& subject) {
+	this->draw();
 }
