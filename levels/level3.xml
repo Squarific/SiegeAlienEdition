@@ -1,0 +1,14 @@
+<level>
+	<enemies>
+		<enemy x="50" y="50" firespeed="300" thrustpowerx="0.3" thrustpowery="0.3">assets/images/enemy.png</enemy>
+		<enemy x="150" y="50" firespeed="300" thrustpowerx="0.3" thrustpowery="0.3">assets/images/enemy.png</enemy>
+		<enemy x="250" y="50" firespeed="300" thrustpowerx="0.3" thrustpowery="0.3">assets/images/enemy.png</enemy>
+		<enemy x="350" y="50" firespeed="300" thrustpowerx="0.3" thrustpowery="0.3">assets/images/enemy.png</enemy>
+		<enemy x="450" y="50" firespeed="300" thrustpowerx="0.3" thrustpowery="0.3">assets/images/enemy.png</enemy>
+		<enemy x="50" y="100" firespeed="200" thrustpowerx="0.4" thrustpowery="0.4">assets/images/enemy.png</enemy>
+		<enemy x="150" y="100" firespeed="200" thrustpowerx="0.4" thrustpowery="0.4">assets/images/enemy.png</enemy>
+		<enemy x="250" y="100" firespeed="200" thrustpowerx="0.4" thrustpowery="0.4">assets/images/enemy.png</enemy>
+		<enemy x="350" y="100" firespeed="200" thrustpowerx="0.4" thrustpowery="0.4">assets/images/enemy.png</enemy>
+		<enemy x="450" y="100" firespeed="200" thrustpowerx="0.4" thrustpowery="0.4">assets/images/enemy.png</enemy>
+	</enemies>
+</level>

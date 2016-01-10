@@ -8,8 +8,9 @@ int main () {
 	si::model::Game* mainGame = new si::model::Game();
 
 	si::Ship* playerShip = new si::Ship("./assets/images/player.png");
-	std::shared_ptr<si::Ship> player = std::shared_ptr<si::Ship>(playerShip);
-	player->setPosition(0, 700);
+	playerShip->setPosition(400, 700);
+
+	std::shared_ptr< si::Ship > player = std::shared_ptr< si::Ship >(playerShip);
 	mainGame->addEntity(player);
 
 	si::view::Screen screen(mainGame);

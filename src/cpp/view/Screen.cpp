@@ -3,6 +3,8 @@
 #include "Errors.h"
 #include "Game.h"
 
+#include <iostream>
+
 si::view::Screen::Screen () {
 	// Trying to make a screen without a game is not defined
 	throw NotEnoughArgumentsError();

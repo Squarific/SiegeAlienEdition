@@ -41,9 +41,19 @@ namespace si {
 				int getFrames();
 
 				/*
+					Same as above but will not reset the last time
+				*/
+				int getFramesWithoutReset();
+
+				/*
 					Get the amount of milliseconds we are using as delta
 				*/
 				int getDeltaTime();
+
+				/*
+					Set the delta time 
+				*/
+				void setDeltaTime(int delta);
 		};
 	}
 }

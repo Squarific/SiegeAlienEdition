@@ -10,10 +10,10 @@ namespace si {
 
 		class PlayerController : public Controller {
 		public:
-			std::shared_ptr<si::Ship> target;
+			std::shared_ptr< si::Ship > target;
 
 			PlayerController();
-			PlayerController(std::shared_ptr<Ship> target);
+			PlayerController(std::shared_ptr< si::Ship > target);
 
 			virtual void update();
 		};

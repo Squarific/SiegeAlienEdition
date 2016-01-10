@@ -8,12 +8,7 @@ si::model::StopWatch::StopWatch () {
 }
 
 si::model::StopWatch::StopWatch (int delta) {
-	if (delta <= 0) {
-		throw new ArgumentShouldBeStrictPositive();
-	}
-
-	this->_delta = delta;
-	this->_lastTime = std::chrono::system_clock::now();
+	this->setDeltaTime(delta);
 }
 
 void si::model::StopWatch::Reset () {
@@ -30,6 +25,24 @@ int si::model::StopWatch::getFrames () {
 	return frames;
 }
 
+int si::model::StopWatch::getFramesWithoutReset () {
+	clocktime currentTime = std::chrono::system_clock::now();
+	milliDuration elapsed = currentTime - this->_lastTime;
+	double elapsedMillis = elapsed.count();
+
+	int frames = elapsedMillis / this->_delta;
+	return frames;
+}
+
 int si::model::StopWatch::getDeltaTime () {
 	return this->_delta;
+}
+
+void si::model::StopWatch::setDeltaTime (int delta) {
+	if (delta <= 0) {
+		throw new ArgumentShouldBeStrictPositive();
+	}
+
+	this->_delta = delta;
+	this->_lastTime = std::chrono::system_clock::now();
 }
